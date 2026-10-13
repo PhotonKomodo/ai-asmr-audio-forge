@@ -1,0 +1,1 @@
+"""ASMR trigger voices. Each module registers one or more trigger classes."""
