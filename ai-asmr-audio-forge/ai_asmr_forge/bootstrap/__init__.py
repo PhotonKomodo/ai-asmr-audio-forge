@@ -1,0 +1,1 @@
+"""Bootstrap layer: process entry, env probe, render-graph wiring."""
