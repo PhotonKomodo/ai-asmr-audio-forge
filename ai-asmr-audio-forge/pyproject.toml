@@ -1,0 +1,44 @@
+[project]
+name = "ai-asmr-audio-forge"
+version = "0.4.2"
+description = "Desktop AI ASMR audio generator — whisper, tap, brush, rain, and layered tingles from text prompts."
+readme = "CONTRIBUTING.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "ai-asmr-forge maintainers" }]
+dependencies = [
+  "numpy>=1.26,<3",
+  "scipy>=1.11,<2",
+  "soundfile>=0.12,<0.14",
+  "sounddevice>=0.4.6,<0.6",
+  "torch>=2.4,<3",
+  "torchaudio>=2.4,<3",
+  "safetensors>=0.4,<0.6",
+  "transformers>=4.44,<5",
+  "librosa>=0.10,<0.12",
+  "pydantic>=2.7,<3",
+  "pydantic-settings>=2.3,<3",
+  "rich>=13.7,<14",
+  "click>=8.1,<9",
+  "pyyaml>=6.0,<7",
+]
+
+[project.scripts]
+ai-asmr-forge = "ai_asmr_forge.app:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.black]
+line-length = 100
+target-version = ["py311"]
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+files = ["ai_asmr_forge/core"]
